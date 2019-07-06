@@ -14,7 +14,8 @@
         android:id="@+id/c_key"
         android:background="@color/red"
         android:layout_marginRight="2dp"
-        android:layout_marginLeft="2dp"/>
+        android:layout_marginLeft="2dp"
+        android:onClick="playC"/>
     <Button
         style="@style/KeyStyle"
         android:layout_width="match_parent"
@@ -22,7 +23,8 @@
         android:id="@+id/d_key"
         android:background="@color/orange"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="5dp"
+        android:onClick="playD"/>
     <Button
         style="@style/KeyStyle"
         android:layout_width="match_parent"
@@ -30,7 +32,8 @@
         android:id="@+id/e_key"
         android:background="@color/yellow"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:onClick="playE"/>
     <Button
         style="@style/KeyStyle"
         android:layout_width="match_parent"
@@ -38,7 +41,8 @@
         android:id="@+id/f_key"
         android:background="@color/green"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"/>
+        android:layout_marginRight="15dp"
+        android:onClick="playF"/>
     <Button
         style="@style/KeyStyle"
         android:layout_width="match_parent"
@@ -46,7 +50,8 @@
         android:id="@+id/g_key"
         android:background="@color/turquoise"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:onClick="playG"/>
     <Button
         style="@style/KeyStyle"
         android:layout_width="match_parent"
@@ -54,7 +59,8 @@
         android:id="@+id/a_key"
         android:background="@color/blue"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"/>
+        android:layout_marginRight="25dp"
+        android:onClick="playA"/>
     <Button
         style="@style/KeyStyle"
         android:layout_width="match_parent"
@@ -62,6 +68,7 @@
         android:id="@+id/b_key"
         android:background="@color/purple"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"/>
+        android:layout_marginRight="30dp"
+        android:onClick="playB"/>
 
 </LinearLayout>
