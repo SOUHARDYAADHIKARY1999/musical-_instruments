@@ -2,6 +2,7 @@ package com.example.musicalinstruments;
 
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mSoundPool =new SoundPool(7, AudioManager.STREAM_MUSIC,0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mSoundPool = new SoundPool.Builder()
+                    .setMaxStreams(NR_OF_SIMULTANEOUS_SOUNDS)
+                    .build();
+        } else {
+            // Deprecated way of creating a SoundPool before Android API 21.
+            mSoundPool = new SoundPool(NR_OF_SIMULTANEOUS_SOUNDS, AudioManager.STREAM_MUSIC, 0);
+        }
 
     }
     public void playC(View v) {
