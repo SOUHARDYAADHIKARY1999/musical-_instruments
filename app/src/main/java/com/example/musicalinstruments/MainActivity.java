@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mSoundPool =new SoundPool(7, AudioManager.STREAM_MUSIC,0);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             mSoundPool = new SoundPool.Builder()
                     .setMaxStreams(NR_OF_SIMULTANEOUS_SOUNDS)
                     .build();
         } else {
             // Deprecated way of creating a SoundPool before Android API 21.
             mSoundPool = new SoundPool(NR_OF_SIMULTANEOUS_SOUNDS, AudioManager.STREAM_MUSIC, 0);
-        }
+        }*/
 
         mCSoundId = mSoundPool.load(getApplicationContext(), R.raw.note1_c, 1);
         mDSoundId = mSoundPool.load(getApplicationContext(), R.raw.note2_d, 1);
@@ -53,21 +53,21 @@ public class MainActivity extends AppCompatActivity {
         mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME, 0, NO_LOOP, NORMAL_PLAY_RATE);
     }
     public void playD(View v) {
-        mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
+        mSoundPool.play(mDSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
     }
     public void playE(View v) {
-        mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
+        mSoundPool.play(mESoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
     }
     public void playF(View v) {
-        mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
+        mSoundPool.play(mFSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
     }
     public void playG(View v) {
-        mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
+        mSoundPool.play(mGSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
     }
     public void playA(View v) {
-        mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
+        mSoundPool.play(mASoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
     }
     public void playB(View v) {
-        mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
+        mSoundPool.play(mBSoundId, LEFT_VOLUME, RIGHT_VOLUME,PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
     }
 }
